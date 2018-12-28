@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Geolocation</title>
+  <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,800" rel="stylesheet">
+  <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+</head>
+
+<body>
+  <!-- <div class="loader">
+    <img class="loadercenter" src="images/2.gif">
+  </div> -->
+  <div class="clarifyprice" id="clarifyprice">
+    <!-- <p>Prices were found within the last 24 hours and are for return flights in Economy Class including 1 bag, taxes and fees.</p> -->
+    <p></p>
+  </div>
+
+  <div id="map"></div>
+
+  <script src="scripts.js"></script>
+  <script src="markercluster.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCmvJPOECc9XCZdWq70AtsNrT15_pen8nM&libraries=places&callback=initMap"
+    async defer></script>
+  <script src="infobubble.js"></script>
+</body>
+
+</html>
