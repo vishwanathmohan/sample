@@ -1,0 +1,186 @@
+<pre>
+
+colors = ['Red','Green','Blue']
+fruits = ['Orange','Grapes','Banana','Apple','Cherry']
+
+for c in colors:
+    for f in fruits:
+        print(f,c)
+
+//
+Orange Red
+Grapes Red
+Banana Red
+Apple Red
+Cherry Red
+Orange Green
+Grapes Green
+Banana Green
+Apple Green
+Cherry Green
+Orange Blue
+Grapes Blue
+Banana Blue
+Apple Blue
+Cherry Blue
+\\
+--------------
+
+x = 21
+
+result = x % 2
+if result == 0:
+    print(x, 'is even number')
+else:
+    print(x, 'is odd number')
+	
+//
+21 is odd number
+\\
+----------------
+x = 2
+
+if(x == 1):
+    print('This is one')
+elif(x == 2):
+    print('This is two')
+elif(x == 3):
+    print('This three')
+elif(x == 4):
+    print('This is Four')
+else:
+    print('out of range')
+	
+\\
+This is two
+//
+----------------
+# INSERT
+
+mylist = ['one','two','three', 'four']
+mylist.insert(4, 'five')
+print(mylist)
+
+\\
+['one', 'two', 'three', 'four', 'five']
+//
+----------------
+# EXTEND
+
+languages = ['Telugu','Tamil','Malayalam']
+sl = ['kannada','hindi']
+languages.extend(sl)
+print(languages)
+
+\\
+['Telugu', 'Tamil', 'Malayalam', 'kannada', 'hindi']
+//
+----------------
+i = 1
+
+while i <= 5:
+    print('Krishna', end=' ')
+    i+=1
+
+    j = 1
+    while j <= 4:
+        print('Mohan', end=' ')
+        j+=1
+    print('')
+	
+\\
+Krishna Mohan Mohan Mohan Mohan
+Krishna Mohan Mohan Mohan Mohan
+Krishna Mohan Mohan Mohan Mohan
+Krishna Mohan Mohan Mohan Mohan
+Krishna Mohan Mohan Mohan Mohan
+//
+----------------
+# for loop
+
+fruits = ['orange','apple','banana','cherry']
+
+for f in fruits:
+    print(f)
+\\
+orange
+apple
+banana
+cherry
+//
+----------------
+for i in range(1, 11):
+    if i % 2 == 1:
+        print(i, 'Krishna')
+    else:
+        print(i, 'Mohan')
+\\
+1 Krishna
+2 Mohan
+3 Krishna
+4 Mohan
+5 Krishna
+6 Mohan
+7 Krishna
+8 Mohan
+9 Krishna
+10 Mohan
+//
+----------------
+for i in range(1, 21):
+    if i % 5 == 0:
+        print(i, 'Five')
+\\
+5 Five
+10 Five
+15 Five
+20 Five
+//
+----------------
+for i in range(1, 20):
+    if i % 5 == 0:
+        print(i)
+\\
+5
+10
+15
+//
+----------------
+for i in range(1, 20):
+    if i % 5 != 0:
+        print(i)
+\\
+1
+2
+3
+4
+6
+7
+8
+9
+11
+12
+13
+14
+16
+17
+18
+19
+//
+----------------
+x = int(input('Enter Number'))
+
+i = 1
+
+while i <= x:
+    print('Krishna')
+    i+=1
+\\
+Krishna
+Krishna
+Krishna
+Krishna
+//
+
+
+</pre>
