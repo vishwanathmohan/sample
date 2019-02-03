@@ -29,4 +29,28 @@
   <script src="infobubble.js"></script>
 </body>
 
+  <script>
+  var countries = [];
+  var html = "<ul>";
+  $.getJSON ("countries.json", function(data){
+    countries = data.countries;
+    for(var i=0; i<countries.length; i++) {
+      html += "<li onclick='clickHandler(event)'>"+countries[i].country+"</li>";
+    }
+  })
+  html += "</ul>";
+  setTimeout(function(){
+    $('.main').append(html)  
+  }, 4000);
+  
+  function clickHandler(e) {
+    console.log(e.target.outerText);
+    for(var i=0; i<countries.length; i++) {
+      if(countries[i].country == e.target.outerText) {
+        console.log(countries[i].states);
+      }
+    }
+  }
+  
+</script>
 </html>
