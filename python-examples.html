@@ -216,5 +216,165 @@ for i in range (1, 31):
 28
 29
 //
+----------------
+for i in range(1, 21):
+    if i % 2 == 0:
+        print(i)
+\\
+2
+4
+6
+8
+10
+12
+14
+16
+18
+20
+//
+--------------------------------
+------------- OOPS -------------
+--------------------------------
+class Employee:
 
-</pre>
+    def __init__(self, name, email, phone):
+        self.name = name
+        self.email = email
+        self.phone = phone
+
+    def employeeDetails(self):
+        print('My name is ' + self.name + ', ' + self.email)
+
+e1 = Employee('krishna','k@gmail.com','9090909090')
+e2 = Employee('mohan','m@gmail.com','8888888896')
+
+e1.employeeDetails()
+e2.employeeDetails()
+
+
+\\
+My name is Tom
+My name is Krishna
+//
+----------------
+# CLASSES AND INSTANCES
+
+
+class Employee:
+    def __init__(self, first, last, pay):
+        self.first = first
+        self.last = last
+        self.pay = pay
+
+    def fullname(self):
+        #print('First : ' + self.first + 'Last :' + self.last + 'Pay :' + self.pay + 'Email :' + self.first + '.' + self.last + '@gmail.com')
+
+        return '{} {} {}'.format(self.first, self.last, self.pay)
+
+e1 = Employee('krishna','mohan','50000')        
+e2 = Employee('gopinath','vishwanath','60000')        
+
+print(e1.fullname())
+print(e2.fullname())
+
+\\
+krishna mohan 50000
+gopinath vishwanath 60000 
+//
+--------------------------------
+# CLASS VARIABLES
+
+class Cars:
+    def __init__(self, model, year, price):
+        self.model = model
+        self.year = year
+        self.price = price
+    
+    def car_details(self):
+        return '{} {} {}'.format(self.model, self.year, self.price)
+
+    def price_inc(self):
+        self.price = int(self.price*1.15)
+
+c1 = Cars('Honda','2018','100000')
+c2 = Cars('Hyundai','2017','80000')
+
+print(c1.car_details())
+print(c2.car_details())
+
+print(c1.model())
+print(c1.price_inc())
+print(c1.price())
+
+\\
+
+//
+----------------
+# HOW TO KNOW ID OF OBJECT
+
+class Computer:
+    pass
+
+c1 = Computer()
+c2 = Computer()
+
+
+print(id(c1))
+print(id(c2))
+
+\\
+48563920
+48802384
+//
+--------------------------------
+
+class Student:
+
+    def __init__(self, s1, s2, s3):
+        self.s1 = s1
+        self.s2 = s2
+        self.s3 = s3
+    
+    def avg(self):
+        return (self.s1 + self.s2 + self.s3)/ 3
+
+n1 = Student(23, 45, 67)
+n2 = Student(28, 89, 45)
+
+print(n1.avg())
+print(n2.avg())
+
+\\
+
+45.0
+54.0
+//
+----------------
+
+class Employee:
+
+    pay_hike = 1.04
+
+    def __init__(self, first, last, pay):
+        self.first = first
+        self.last = last
+        self.pay = pay
+
+    def details(self):
+        return '{} {} {}'.format(self.first, self.last, self.pay)
+
+    def increase(self):
+        self.pay = int(self.pay * self.pay_hike)
+
+e1 = Employee('Krishna','Mohan',50000)
+e2 = Employee('Krishna','Mohan',60000)
+
+print(e1.details())
+e1.increase()
+print(e1.details())
+
+\\
+Krishna Mohan 50000
+Krishna Mohan 52000
+//
+--------------------------------
