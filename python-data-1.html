@@ -29,5 +29,14 @@ data = pd.read_csv('countries.csv')
 
 # BY USING LOC
 #myloc = data.loc[2, 'population']       # FOR SINGLE VALUE
-myloc = data.loc[[2, 3], 'population']       # FOR MULTIPLE VALUE
-print(myloc)
+#myloc = data.loc[[1, 4], ['population', 'country_name']]    # FOR MULTIPLE VALUE
+#print(myloc)
+
+#BY USING LOC GET THE DATA FROM - TO TITLE NAME
+#myloc = data.loc[2:5, ['country_name', 'population']]   # FOR PERTICULAR TITLES
+#myloc = data.loc[2:5, :]    # SHOW ALL TITLE BY USING (:)
+#print(myloc)
+
+# ILOC INCLUDE FIRST EXCLUDE THE LAST (ONLY NUMBERS NO TITLES)
+myiloc = data.iloc[2:5, :]
+print(myiloc)
