@@ -1,0 +1,33 @@
+#https://www.youtube.com/watch?v=cXP_i5-nTXg
+
+import numpy as np
+import pandas as pd
+
+data = pd.read_csv('countries.csv')
+
+#print(data)                                          # get the all the data from countries.csv
+
+#print(type(data))                                    # pandas.core.frame.DataFrame
+
+#print(data.head())
+
+# UPDATE THE TITLE
+#data = data.rename(columns={'country_name':'Country'})
+#print(data.head())
+
+# VIEW BASE ON TITLE
+#single_year = data[data.country_name == 'India']
+#print(single_year)
+
+# VIEW ONLY ONE PERTICULAR COLUMN
+#single_column = data.population
+#print(single_column)
+
+# VIEW MULTIPLE COLUMNS
+#multiple_column = data[['country_name','population']]
+#print(multiple_column)
+
+# BY USING LOC
+#myloc = data.loc[2, 'population']       # FOR SINGLE VALUE
+myloc = data.loc[[2, 3], 'population']       # FOR MULTIPLE VALUE
+print(myloc)
