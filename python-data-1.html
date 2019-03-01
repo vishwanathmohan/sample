@@ -3,11 +3,17 @@
 import numpy as np
 import pandas as pd
 
-data = pd.read_csv('countries.csv')
+data = pd.read_csv('schooldata.csv')
 
-#print(data)                                          # get the all the data from countries.csv
+titleChange = data.rename(columns={'principal':'PPPP'})
 
-#print(type(data))                                    # pandas.core.frame.DataFrame
+showOnlyThree = data[['nschid','school','principal']]
+
+print(titleChange.head(10))
+
+#return data()
+
+#print(type(data)) 
 
 #print(data.head())
 
@@ -38,5 +44,66 @@ data = pd.read_csv('countries.csv')
 #print(myloc)
 
 # ILOC INCLUDE FIRST EXCLUDE THE LAST (ONLY NUMBERS NO TITLES)
-myiloc = data.iloc[2:5, :]
-print(myiloc)
+#myiloc = data.iloc[2:5, :]
+#print(myiloc)
+
+# IDENTIFY LENGTH OF DATA
+#print(len(data))
+
+# IDENTIFY ALL COLUMNS NAMES
+#print(data.columns)
+
+# IDENTIFY NO OF COLUMNS
+#print(len(data.columns))
+
+# DISPLAY ONLY TOP 5 ITEMS
+#print(data.head())         # WE CAN GIVE VALUES AS WELL (10)
+
+# DISPLAY ONLY BOTTOM 5 ITEMS
+#print(data.tail())         # WE CAN GIVE VALUES AS WELL (10)
+
+#INFORMATION ON THE COLUMNS
+#print(data.info())
+
+#DESCRIPTION OF THE TABLE
+#print(data.describe())
+
+#data.describe().tranpose()
+#print(data)
+
+#CHANAGE THE COLOMNS TITLE NAMES
+#data.columns = ['a','b','c','d','e','f','g']
+#print(data.head())
+
+# ROWS
+#print(data[2:4])
+
+# DISPLAY ALL REVERSE
+#reverse = data[::-1]
+#print(reverse)
+
+# DISPLAY EVERY 10/ 20/ 30
+#displayOrder = data[::10]
+#print(displayOrder)
+
+# DISPLAY ONLY ONE PERTICULAR COLUMN
+#displayOneColumn = data.head()['Rep']
+#displayOneColumn = data['Rep'].head()
+#print(displayOneColumn)
+
+# DISPLAY SOME PERTICULAR COLUMNS
+#perticularColumns = data['a','b','c','d','e','f','g']
+#print(perticularColumns)
+
+# FILTER
+#one = data.k > 50
+#filter = data[one]
+#print(filter)
+
+# FILTER 2
+#filter2 = data.total > 300
+#print(filter2)
+
+# FILTER 3
+#data[filter & filter2]
+#print(data)
